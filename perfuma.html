@@ -1055,6 +1055,87 @@
             color: var(--pink);
         }
 
+        /* ===== PERMISSIONS MOCKUP ===== */
+        .perm-body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .perm-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            background: var(--dark4);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 10px 12px;
+            transition: all 0.25s;
+        }
+        .perm-row:hover {
+            border-color: var(--border2);
+        }
+        .perm-emp {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .perm-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+        .perm-name {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .perm-role {
+            font-size: 9px;
+            color: var(--text3);
+            margin-top: 1px;
+        }
+        .perm-tags {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        .perm-tag {
+            font-size: 8.5px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+        .perm-tag.on {
+            background: rgba(16, 185, 129, 0.12);
+            color: #10B981;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+        .perm-tag.off {
+            background: rgba(100, 116, 139, 0.1);
+            color: var(--text3);
+            border: 1px solid var(--border);
+        }
+        .perm-locked {
+            margin-top: 4px;
+            font-size: 10px;
+            color: #F59E0B;
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 10px;
+            padding: 10px 12px;
+            text-align: center;
+        }
+
         /* ===== BIG FEATURES ===== */
         .big-features {
             padding: 100px 0;
@@ -2095,7 +2176,7 @@
                 <div class="hero-stat-label">إصدار احترافي</div>
             </div>
             <div class="hero-stat-item">
-                <div class="hero-stat-num">30+</div>
+                <div class="hero-stat-num">40+</div>
                 <div class="hero-stat-label">ميزة متقدمة</div>
             </div>
             <div class="hero-stat-item">
@@ -2230,6 +2311,21 @@
                     <h3>فواتير احترافية</h3>
                     <p>طباعة فواتير حرارية 80mm كاملة مع الخصومات والنقاط، قابلة للتخصيص بشعار محلك واسمك.</p>
                 </div>
+                <div class="feature-card reveal" data-tilt>
+                    <div class="feature-icon" style="background:rgba(236,72,153,0.12);">👤</div>
+                    <h3>صلاحيات موظفين متعددة</h3>
+                    <p>وظّف عمالاً بحسابات وصلاحيات منفصلة — كل عامل يرى فقط ما يخصه، والأرباح تبقى سرّك وحدك.</p>
+                </div>
+                <div class="feature-card reveal" data-tilt>
+                    <div class="feature-icon" style="background:rgba(16,185,129,0.12);">🔑</div>
+                    <h3>خزينة وتسوية يومية ذكية</h3>
+                    <p>رصيد الدرج يُرحَّل تلقائياً من يوم لآخر، ومقارنة فورية بين النقد المتوقع والفعلي لاكتشاف أي فرق.</p>
+                </div>
+                <div class="feature-card reveal" data-tilt>
+                    <div class="feature-icon" style="background:rgba(245,158,11,0.12);">🎟️</div>
+                    <h3>كوبونات وبطاقات هدايا</h3>
+                    <p>أنشئ أكواد خصم بحدود استخدام، أو بطاقات هدايا برصيد قابل للتعبئة والاستخدام التدريجي.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -2313,12 +2409,84 @@
         </div>
     </section>
 
+    <!-- TEAM PERMISSIONS HIGHLIGHT -->
+    <section class="feature-highlight" id="team">
+        <div class="container">
+            <div class="highlight-grid">
+                <div class="reveal">
+                    <div class="pos-ui">
+                        <div class="pos-header">
+                            <span class="pos-header-title">👥 إدارة صلاحيات الموظفين</span>
+                            <span style="font-size:10px;color:#10B981;background:rgba(16,185,129,0.1);padding:4px 10px;border-radius:20px;">● 3 نشطين</span>
+                        </div>
+                        <div class="perm-body">
+                            <div class="perm-row">
+                                <div class="perm-emp">
+                                    <div class="perm-avatar" style="background:rgba(236,72,153,0.15);color:var(--pink);">أح</div>
+                                    <div>
+                                        <div class="perm-name">أحمد بلقاسم</div>
+                                        <div class="perm-role">عامل مبيعات</div>
+                                    </div>
+                                </div>
+                                <div class="perm-tags">
+                                    <span class="perm-tag on">✓ مبيعات</span>
+                                    <span class="perm-tag on">✓ مخزون</span>
+                                    <span class="perm-tag off">✕ الخزينة</span>
+                                </div>
+                            </div>
+                            <div class="perm-row">
+                                <div class="perm-emp">
+                                    <div class="perm-avatar" style="background:rgba(59,130,246,0.15);color:#60A5FA;">سا</div>
+                                    <div>
+                                        <div class="perm-name">سارة مرابط</div>
+                                        <div class="perm-role">مسؤولة الخزينة</div>
+                                    </div>
+                                </div>
+                                <div class="perm-tags">
+                                    <span class="perm-tag on">✓ مبيعات</span>
+                                    <span class="perm-tag on">✓ الخزينة</span>
+                                    <span class="perm-tag on">✓ الديون</span>
+                                </div>
+                            </div>
+                            <div class="perm-row">
+                                <div class="perm-emp">
+                                    <div class="perm-avatar" style="background:rgba(245,158,11,0.15);color:#FBBF24;">م</div>
+                                    <div>
+                                        <div class="perm-name">أنت (المدير)</div>
+                                        <div class="perm-role">صلاحية كاملة</div>
+                                    </div>
+                                </div>
+                                <div class="perm-tags">
+                                    <span class="perm-tag on">✓ كل الصلاحيات</span>
+                                </div>
+                            </div>
+                            <div class="perm-locked">🔒 الأرباح، التحليلات، والإعدادات — تبقى حصراً للمدير مهما مُنحت صلاحيات</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="section-label">جديد — إدارة الفريق</div>
+                    <h2 class="section-title">وظّف عمالاً،<br>وابقَ مطمئناً.</h2>
+                    <p class="section-desc">كل موظف يدخل برمز خاص به، ويرى فقط ما تسمح له به — لا كلمة سر واحدة يتشاركها الجميع، ولا خوف من كشف أرباحك.</p>
+                    <ul class="highlight-list">
+                        <li><span class="check">✓</span> رمز دخول (PIN) خاص لكل موظف</li>
+                        <li><span class="check">✓</span> صلاحيات دقيقة: مبيعات، مخزون، ديون، خزينة، وأكثر</li>
+                        <li><span class="check">✓</span> الأرباح وسعر التكلفة مخفية تماماً عن العمال دائماً</li>
+                        <li><span class="check">✓</span> كل فاتورة مرتبطة بالبائع الذي أنشأها فعلياً</li>
+                        <li><span class="check">✓</span> تعطيل أي حساب فوراً دون حذف السجل</li>
+                        <li><span class="check">✓</span> لوحة تحكم، تحليلات، وإعدادات — للمدير فقط دائماً</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- BIG FEATURES LIST -->
     <section class="big-features" id="all-features">
         <div class="container">
             <div style="text-align:center">
                 <div class="section-label">القائمة الكاملة</div>
-                <h2 class="section-title">30+ ميزة في برنامج واحد</h2>
+                <h2 class="section-title">40+ ميزة في برنامج واحد</h2>
             </div>
             <div class="big-features-grid reveal">
                 <div class="big-feature-item">
@@ -2369,6 +2537,42 @@
                     <div class="big-feature-icon">🌙</div>
                     <div class="big-feature-content"><h4>واجهة Dark Mode حصرية</h4><p>تصميم عصري بألوان داكنة مريحة للعين، مثالي للعمل الطويل.</p></div>
                 </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">👤</div>
+                    <div class="big-feature-content"><h4>نظام صلاحيات موظفين</h4><p>حساب ورمز دخول خاص لكل عامل، مع صلاحيات دقيقة يحددها المدير لكل موظف على حدة.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🕵️</div>
+                    <div class="big-feature-content"><h4>تتبع البائع لكل فاتورة</h4><p>كل عملية بيع مرتبطة تلقائياً بالموظف الذي أنشأها — محاسبة دقيقة وشفافة للفريق.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🔑</div>
+                    <div class="big-feature-content"><h4>تسوية نهاية اليوم</h4><p>رصيد افتتاحي تلقائي من اليوم السابق، ومقارنة النقد المتوقع بالفعلي لاكتشاف أي فرق فوراً.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">💰</div>
+                    <div class="big-feature-content"><h4>خزينة موحّدة</h4><p>كل إيداع وسحب مسجّل تلقائياً ومرتبط بالتسوية اليومية — رقم واحد موثوق للنقد الحقيقي.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🎟️</div>
+                    <div class="big-feature-content"><h4>كوبونات خصم مرنة</h4><p>أكواد خصم بنسبة أو قيمة ثابتة، بحد أقصى لعدد مرات الاستخدام تتحكم فيه بنفسك.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🎁</div>
+                    <div class="big-feature-content"><h4>بطاقات هدايا</h4><p>بطاقات برصيد قابل للتعبئة، تُستخدم تدريجياً في أي عملية بيع لاحقة.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">📇</div>
+                    <div class="big-feature-content"><h4>إدارة ديون العملاء</h4><p>تسجيل الديون، دفعات جزئية أو كاملة، ومتابعة المتأخرات بسهولة تامة.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🏷️</div>
+                    <div class="big-feature-content"><h4>باركود تلقائي وطباعة فورية</h4><p>توليد رمز فريد لكل منتج تلقائياً، وطباعة ملصقات الباركود مباشرة بدون تعقيد.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🛡️</div>
+                    <div class="big-feature-content"><h4>نسخ احتياطي مشفّرة بكلمة سر</h4><p>احمِ بياناتك بكلمة سر خاصة بك، وانقلها بأمان لأي جهاز آخر متى شئت.</p></div>
+                </div>
             </div>
         </div>
     </section>
@@ -2383,7 +2587,7 @@
                     <div class="stats-band-sub">في الجزائر والمغرب</div>
                 </div>
                 <div class="stats-band-item">
-                    <div class="stats-band-num">30+</div>
+                    <div class="stats-band-num">40+</div>
                     <div class="stats-band-label">ميزة متكاملة</div>
                     <div class="stats-band-sub">من POS إلى التحليلات</div>
                 </div>
