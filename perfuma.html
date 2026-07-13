@@ -692,10 +692,11 @@
             transition: all var(--transition-bounce);
             position: relative;
             overflow: hidden;
-            backdrop-filter: blur(var(--glass-blur));
-            -webkit-backdrop-filter: blur(var(--glass-blur));
+            backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+            -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
             cursor: pointer;
             will-change: transform;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
         }
         .feature-card::before {
             content: '';
@@ -1296,9 +1297,10 @@
             transition: all var(--transition-bounce);
             position: relative;
             overflow: hidden;
-            backdrop-filter: blur(var(--glass-blur));
-            -webkit-backdrop-filter: blur(var(--glass-blur));
+            backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+            -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
             cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
         }
         .integration-card::before {
             content: '';
@@ -2819,7 +2821,7 @@
                 </div>
                 <div class="pricing-card popular reveal" data-tilt>
                     <div class="pricing-name">احترافي</div>
-                    <div class="pricing-price"><span class="pricing-amount">4,990</span><span class="pricing-currency">دج</span></div>
+                    <div class="pricing-price"><span class="pricing-amount">28000</span><span class="pricing-currency">دج</span></div>
                     <div class="pricing-period">ترخيص دائم — لجهاز واحد</div>
                     <hr class="pricing-divider">
                     <ul class="pricing-features">
@@ -2833,7 +2835,7 @@
                 </div>
                 <div class="pricing-card reveal" data-tilt>
                     <div class="pricing-name">متعدد المحلات</div>
-                    <div class="pricing-price"><span class="pricing-amount">8,990</span><span class="pricing-currency">دج</span></div>
+                    <div class="pricing-price"><span class="pricing-amount">75000</span><span class="pricing-currency">دج</span></div>
                     <div class="pricing-period">ترخيص دائم — 3 أجهزة</div>
                     <hr class="pricing-divider">
                     <ul class="pricing-features">
@@ -2940,10 +2942,10 @@
                 </div>
                 <div class="footer-col"><h4>المميزات</h4><ul><li><a href="#">نقطة البيع POS</a></li><li><a href="#">إدارة المخزون</a></li><li><a href="#">نظام الولاء</a></li><li><a href="#">التحليلات</a></li><li><a href="#">إدارة المصاريف</a></li><li><a href="#team">صلاحيات الموظفين</a></li></ul></div>
                 <div class="footer-col"><h4>التكاملات</h4><ul><li><a href="#">بوت تلغرام</a></li><li><a href="#">Google Drive</a></li><li><a href="#">طباعة حرارية</a></li><li><a href="#">تصدير JSON</a></li><li><a href="#">نسخ احتياطي مشفّر</a></li></ul></div>
-                <div class="footer-col"><h4>الدعم</h4><ul><li><a href="https://t.me/mralger">تلغرام المطور</a></li><li><a href="#">دليل المستخدم</a></li><li><a href="#">الأسئلة الشائعة</a></li><li><a href="#">سياسة الخصوصية</a></li></ul></div>
+                <div class="footer-col"><h4>الدعم</h4><ul><li><a href="https://t.me/mralger">تلغرام المطور</a></li><li><a href="#">دليل المستخدم</a></li><li><a href="#">الأسئلة الشائعة</a></li><li><a href="privacy.html">سياسة الخصوصية</a></li></ul></div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 عطراتي برو — جميع الحقوق محفوظة | MokhtarProd</p>
+                <p>© 2026 عطراتي برو — جميع الحقوق محفوظة | MokhtarProd — <a href="privacy.html" style="color:var(--text2);text-decoration:underline;">سياسة الخصوصية</a></p>
                 <p style="color:var(--pink);">صُنع في الجزائر 🇩🇿 بـ ❤️</p>
             </div>
         </div>
@@ -2964,7 +2966,7 @@
             let dotX = 0,
                 dotY = 0;
             document.addEventListener('mousemove', (e) => { mouseX = e.clientX;
-                mouseY = e.clientY; });
+                mouseY = e.clientY; }, { passive: true });
             const hoverElements = document.querySelectorAll(
                 'a, button, .feature-card, .integration-card, .pricing-card, .testimonial-card, .screen-card, .faq-question, .pos-product-card, .mockup-nav-item, .tech-badge, .hero-stat-item'
                 );
@@ -2980,10 +2982,8 @@
                 cursorY += (mouseY - cursorY) * 0.12;
                 dotX += (mouseX - dotX) * 0.25;
                 dotY += (mouseY - dotY) * 0.25;
-                cursor.style.left = cursorX + 'px';
-                cursor.style.top = cursorY + 'px';
-                cursorDot.style.left = dotX + 'px';
-                cursorDot.style.top = dotY + 'px';
+                cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+                cursorDot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
                 requestAnimationFrame(animate);
             }
             animate();
@@ -3007,7 +3007,8 @@
         // ===== PARTICLES =====
         (function() {
             const canvas = document.getElementById('particles-canvas');
-            const ctx = canvas.getContext('2d');
+            const ctx = canvas ? canvas.getContext('2d') : null;
+            if (!canvas || !ctx) return; // [FIX] بعض المتصفحات/إضافات الخصوصية تعطّل Canvas API لمنع البصمة الرقمية — نتجاهل الخلفية المتحركة بأمان بدل تعطيل بقية الصفحة
             let W, H, particles = [],
                 dpr = window.devicePixelRatio || 1;
             const symbols = ['✦', '·', '⊹', '✧', '•', '◦', '⁕', '∘', '꩜', '✺'];
@@ -3202,17 +3203,23 @@
         }
 
         // ===== PARALLAX ON ORBS =====
+        const _orbs = document.querySelectorAll('.orb');
         window.addEventListener('scroll', () => {
             const y = window.scrollY;
-            document.querySelectorAll('.orb').forEach((orb, i) => {
+            _orbs.forEach((orb, i) => {
                 orb.style.transform = `translateY(${y * (0.06 + i * 0.03)}px)`;
             });
         }, { passive: true });
 
-        // ===== TILT EFFECT =====
+        // ===== TILT EFFECT (محسَّن: قياس الأبعاد مرة واحدة فقط عند الدخول، لا على كل حركة فأرة) =====
         document.querySelectorAll('[data-tilt]').forEach(card => {
+            let rect = null;
+            card.addEventListener('mouseenter', () => {
+                rect = card.getBoundingClientRect();
+                card.style.transition = 'transform 0.15s ease-out';
+            });
             card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
+                if (!rect) return;
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
                 const centerX = rect.width / 2;
@@ -3221,13 +3228,11 @@
                 const rotateY = ((x - centerX) / centerX) * 6;
                 card.style.transform =
                     `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.02)`;
-            });
+            }, { passive: true });
             card.addEventListener('mouseleave', () => {
+                rect = null;
                 card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0) scale(1)';
                 card.style.transition = 'transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1)';
-            });
-            card.addEventListener('mouseenter', () => {
-                card.style.transition = 'transform 0.15s ease-out';
             });
         });
 
