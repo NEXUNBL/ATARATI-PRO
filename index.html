@@ -54,7 +54,7 @@
         }
         html {
             scroll-behavior: smooth;
-            cursor: none;
+            cursor: auto;
         }
         body {
             font-family: 'Tajawal', sans-serif;
@@ -2246,8 +2246,8 @@
 <body>
 
     <!-- CUSTOM CURSOR -->
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor" id="cursor" style="display:none"></div>
+    <div class="cursor-dot" id="cursor-dot" style="display:none"></div>
 
     <!-- SCROLL PROGRESS -->
     <div class="scroll-progress" id="scrollProgress"></div>
@@ -3092,40 +3092,7 @@
     <a href="https://wa.me/qr/QOHSZG6GSXHED1" target="_blank" class="contact-trigger float-btn">💬 احصل على نسخة تجريبية</a>
 
     <script>
-        // ===== CUSTOM CURSOR =====
-        (function() {
-            const cursor = document.getElementById('cursor');
-            const cursorDot = document.getElementById('cursor-dot');
-            if (!cursor || !cursorDot) return;
-            let mouseX = 0,
-                mouseY = 0;
-            let cursorX = 0,
-                cursorY = 0;
-            let dotX = 0,
-                dotY = 0;
-            document.addEventListener('mousemove', (e) => { mouseX = e.clientX;
-                mouseY = e.clientY; }, { passive: true });
-            const hoverElements = document.querySelectorAll(
-                'a, button, .feature-card, .integration-card, .pricing-card, .testimonial-card, .screen-card, .faq-question, .pos-product-card, .mockup-nav-item, .tech-badge, .hero-stat-item'
-                );
-            hoverElements.forEach(el => {
-                el.addEventListener('mouseenter', () => { cursor.classList.add('hover');
-                    cursorDot.classList.add('hover'); });
-                el.addEventListener('mouseleave', () => { cursor.classList.remove('hover');
-                    cursorDot.classList.remove('hover'); });
-            });
-
-            function animate() {
-                cursorX += (mouseX - cursorX) * 0.45;
-                cursorY += (mouseY - cursorY) * 0.45;
-                dotX += (mouseX - dotX) * 0.7;
-                dotY += (mouseY - dotY) * 0.7;
-                cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
-                cursorDot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
-                requestAnimationFrame(animate);
-            }
-            animate();
-        })();
+        // ===== CUSTOM CURSOR (مُعطَّل - تم استخدام مؤشر النظام العادي) =====
 
         // ===== SCROLL PROGRESS =====
         window.addEventListener('scroll', () => {
