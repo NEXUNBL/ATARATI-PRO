@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
+    <title>سياسة الخصوصية — عطراتي برو</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Cairo:wght@300;400;600;700;900&family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #EC4899;
+            --pink-dark: #BE185D;
+            --pink-light: #F9A8D4;
+            --pink-glow: rgba(236, 72, 153, 0.22);
+            --gold: #F59E0B;
+            --gold-light: #FCD34D;
+            --dark: #030712;
+            --dark2: #070B1A;
+            --dark3: #0F1423;
+            --dark4: #182032;
+            --surface: rgba(255, 255, 255, 0.03);
+            --surface2: rgba(255, 255, 255, 0.06);
+            --border: rgba(255, 255, 255, 0.06);
+            --border2: rgba(236, 72, 153, 0.28);
+            --text: #F1F5F9;
+            --text2: #94A3B8;
+            --text3: #64748B;
+            --green: #10B981;
+            --green-glow: rgba(16, 185, 129, 0.25);
+            --blue: #3B82F6;
+            --purple: #8B5CF6;
+            --purple-glow: rgba(139, 92, 246, 0.2);
+            --radius-sm: 12px;
+            --radius: 18px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --transition: 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.5);
+            --glass-bg: rgba(15, 20, 35, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-blur: 24px;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: var(--dark);
+            color: var(--text);
+            line-height: 1.9;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 40% at 50% -10%, var(--pink-glow), transparent),
+                        radial-gradient(ellipse 50% 30% at 100% 100%, var(--purple-glow), transparent);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .container { max-width: 860px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 20px 40px;
+            background: rgba(3, 7, 18, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-logo { font-family: 'El Messiri', sans-serif; font-size: 22px; font-weight: 700; color: var(--text); text-decoration: none; }
+        .nav-logo span { color: var(--pink); }
+        .nav-back {
+            color: var(--text2); text-decoration: none; font-size: 14px; font-weight: 600;
+            display: flex; align-items: center; gap: 8px; transition: var(--transition);
+        }
+        .nav-back:hover { color: var(--pink); }
+
+        .policy-hero { padding: 72px 0 48px; text-align: center; }
+        .policy-hero .badge {
+            display: inline-block; padding: 8px 18px; border-radius: 30px;
+            background: var(--pink-glow); border: 1px solid var(--border2);
+            color: var(--pink-light); font-size: 13px; font-weight: 700; margin-bottom: 20px;
+        }
+        .policy-hero h1 {
+            font-family: 'El Messiri', sans-serif;
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #fff 30%, var(--pink-light));
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .policy-hero p { color: var(--text2); font-size: 16px; max-width: 540px; margin: 0 auto; }
+        .policy-updated { color: var(--text3); font-size: 13px; margin-top: 14px; }
+
+        .policy-body { padding: 20px 0 100px; }
+        .policy-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            margin-bottom: 24px;
+            backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+            -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            transition: border-color 0.3s;
+        }
+        .policy-card:hover {
+            border-color: var(--border2);
+        }
+        .policy-card h2 {
+            display: flex; align-items: center; gap: 12px;
+            font-family: 'El Messiri', sans-serif;
+            font-size: 21px; font-weight: 700; color: var(--text);
+            margin-bottom: 16px;
+        }
+        .policy-card .icon {
+            width: 40px; height: 40px; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; flex-shrink: 0;
+            background: var(--pink-glow);
+        }
+        .policy-card p { color: var(--text2); font-size: 15px; margin-bottom: 12px; }
+        .policy-card p:last-child { margin-bottom: 0; }
+        .policy-card ul { color: var(--text2); font-size: 15px; margin: 12px 0; padding-right: 20px; }
+        .policy-card li { margin-bottom: 8px; }
+        .policy-card strong { color: var(--text); font-weight: 700; }
+        .highlight-box {
+            background: rgba(16, 185, 129, 0.06);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 14px;
+            padding: 16px 20px;
+            font-size: 14px;
+            color: #6EE7B7;
+            margin-top: 16px;
+        }
+
+        footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; }
+        footer p { color: var(--text3); font-size: 13px; }
+        footer a { color: var(--pink-light); text-decoration: none; }
+
+        @media (max-width: 640px) {
+            nav { padding: 16px 20px; }
+            .policy-card { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="perfuma.html" class="nav-logo">🌹 <span>عطراتي</span> برو</a>
+        <a href="perfuma.html" class="nav-back">→ العودة للرئيسية</a>
+    </nav>
+
+    <section class="policy-hero">
+        <div class="container">
+            <div class="badge">🔒 خصوصيتك أولوية، لا شعار تسويقي</div>
+            <h1>سياسة الخصوصية</h1>
+            <p>باختصار: بياناتك تبقى على جهازك أنت. نحن لا نبيعها، لا نشاركها، ولا حتى نراها.</p>
+            <div class="policy-updated">آخر تحديث: يوليو 2026</div>
+        </div>
+    </section>
+
+    <section class="policy-body">
+        <div class="container">
+
+            <div class="policy-card">
+                <h2><span class="icon">💾</span> أين تُخزَّن بياناتك؟</h2>
+                <p><strong>عطراتي برو تطبيق سطح مكتب</strong> — قاعدة بياناتك الكاملة (المبيعات، العملاء، المخزون، الموظفين، كل شيء) تُخزَّن محلياً على جهاز الكمبيوتر الخاص بمحلك فقط، داخل مجلد بيانات التطبيق على نظام التشغيل.</p>
+                <div class="highlight-box">✅ نحن (فريق تطوير عطراتي برو) لا نملك أي وصول لبياناتك، ولا تُرسَل أي نسخة منها لخوادمنا بشكل تلقائي أو افتراضي.</div>
+            </div>
+
+            <div class="policy-card">
+                <h2><span class="icon">🔌</span> التكاملات الاختيارية</h2>
+                <p>يوفّر النظام تكاملات خارجية اختيارية بالكامل — لا تُفعَّل إلا إذا قمت أنت بإعدادها يدوياً:</p>
+                <ul>
+                    <li><strong>Google Drive:</strong> عند تفعيله، تُرفَع نسخة احتياطية من قاعدة بياناتك إلى <em>حساب Google Drive الخاص بك أنت</em> عبر بروتوكول OAuth2 الرسمي — نحن لا نملك وصولاً لهذا الحساب ولا لما يُرفَع إليه.</li>
+                    <li><strong>بوت تلغرام:</strong> يستخدم <em>حساب البوت الخاص بك</em> (Bot Token خاص بك) لإرسال تنبيهات لمحلك فقط — لا يمر عبر أي خادم تابع لنا.</li>
+                </ul>
+            </div>
+
+            <div class="policy-card">
+                <h2><span class="icon">🛡️</span> النسخ الاحتياطي المشفّر</h2>
+                <p>عند تفعيل التشفير، تُحمى نسختك الاحتياطية بكلمة سر <strong>من اختيارك أنت وحدك</strong>. هذه الكلمة لا تُخزَّن لدينا ولا في أي مكان خارج جهازك — إن نسيتها، لا نستطيع نحن ولا أي طرف آخر استرجاع الملف. هذا مقصود: أمانك يعني أننا لا نملك مفتاحاً احتياطياً لبياناتك.</p>
+            </div>
+
+            <div class="policy-card">
+                <h2><span class="icon">🧑‍💼</span> حسابات الموظفين وكلمات المرور</h2>
+                <p>رموز دخول الموظفين (PIN) وكلمة مرور المدير تُخزَّن بصيغة مُشفَّرة (Hash) غير قابلة للعكس داخل قاعدة بياناتك المحلية — حتى نحن لا نستطيع قراءتها لو اطّلعنا على الملف.</p>
+            </div>
+
+            <div class="policy-card">
+                <h2><span class="icon">🌐</span> هذا الموقع التعريفي تحديداً</h2>
+                <p>هذه الصفحة التي تقرأها الآن (الموقع التعريفي) منفصلة عن التطبيق نفسه. هي تستخدم فقط خطوط Google Fonts القياسية لعرض النصوص بشكل صحيح — ولا تحتوي أي أدوات تتبع إعلاني أو تحليلات تُشارَك مع أطراف ثالثة.</p>
+            </div>
+
+            <div class="policy-card">
+                <h2><span class="icon">⚖️</span> حقوقك الكاملة</h2>
+                <ul>
+                    <li>تصدير كامل بياناتك في أي وقت (ميزة "تصدير قاعدة البيانات" مدمجة في الإعدادات).</li>
+                    <li>حذف أي بيانات تريدها بنفسك مباشرة من داخل التطبيق، دون الحاجة لطلب إذن منّا.</li>
+                    <li>إلغاء أي تكامل خارجي (Google Drive أو تلغرام) في أي لحظة من الإعدادات.</li>
+                </ul>
+            </div>
+
+            <div class="policy-card">
+                <h2><span class="icon">✉️</span> تواصل معنا</h2>
+                <p>لأي استفسار حول هذه السياسة أو خصوصية بياناتك، راسلنا مباشرة عبر <a href="https://t.me/mralger" style="color:var(--pink-light);">تلغرام المطوّر</a>.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 عطراتي برو — جميع الحقوق محفوظة | MokhtarProd</p>
+            <p style="margin-top:8px;"><a href="perfuma.html">العودة للصفحة الرئيسية</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
