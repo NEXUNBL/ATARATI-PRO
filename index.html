@@ -2244,7 +2244,11 @@
             font-family: inherit;
         }
         .contact-modal-back:hover { color: #fff; }
-    </style>
+    
+        /* [BG-UPGRADE] خلفية حيّة */
+        #particles-canvas { opacity: 1; }
+        .orb { will-change: translate; transition: translate .6s ease-out; }
+</style>
 </head>
 <body>
     <!-- [DECOY] API endpoint: https://api.atarati-pro.com/v2/graphql (Beta) -->
@@ -2750,6 +2754,59 @@
                     <div class="big-feature-icon">🤝</div>
                     <div class="big-feature-content"><h4>إدارة الموردين</h4><p>قاعدة بيانات للموردين، متابعة المشتريات والأرصدة المستحقة، وحذف شامل عند مسح بيانات التجربة.</p></div>
                 </div>
+            
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🖨️</div>
+                    <div class="big-feature-content"><h4>طباعة على أي طابعة حرارية</h4><p>اختر الطابعة المثبّتة على ويندوز مباشرة، أو اتصل عبر USB أو الشبكة أو البلوتوث، مع عربية مقروءة على الإيصال.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🏷️</div>
+                    <div class="big-feature-content"><h4>ملصقات باركود TSPL</h4><p>اطبع ملصقات الباركود بمقاس ملصقك على طابعات الملصقات الحرارية.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🍾</div>
+                    <div class="big-feature-content"><h4>مخزون القوارير</h4><p>تتبّع القوارير بكل حجم وتكلفتها، وتدخل تكلفتها في حساب ربح كل فاتورة.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">📉</div>
+                    <div class="big-feature-content"><h4>تسجيل خسائر المخزون</h4><p>سجّل التالف والمفقود بالملّي ليُخصم من المخزون وينعكس على صافي الربح.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🌍</div>
+                    <div class="big-feature-content"><h4>واجهة عربية وإنجليزية</h4><p>بدّل لغة البرنامج بضغطة واحدة دون إعادة تثبيت.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">📤</div>
+                    <div class="big-feature-content"><h4>تصدير إلى Excel</h4><p>صدّر المبيعات والمخزون إلى ملفات Excel للمحاسب أو للأرشفة.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">♻️</div>
+                    <div class="big-feature-content"><h4>استعادة آمنة للنسخ</h4><p>يفحص ملف النسخة قبل الاستعادة، ويحفظ نسخة أمان من قاعدتك الحالية، ويطبّق الاستعادة عند إعادة التشغيل.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🚫</div>
+                    <div class="big-feature-content"><h4>منع تكرار الفاتورة</h4><p>نقرتان متتاليتان على «إتمام البيع» لا تنشئان فاتورتين.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">📝</div>
+                    <div class="big-feature-content"><h4>إلغاء بضوابط</h4><p>سبب إلزامي لكل إلغاء، والعامل يلغي فواتير اليوم فقط، وسجل الديون والدفعات يبقى للتدقيق.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">💳</div>
+                    <div class="big-feature-content"><h4>بطاقة الهدايا وسيلة دفع</h4><p>يُسجَّل البيع بقيمته الكاملة ويُخصم من رصيد البطاقة، فلا يتشوّه الإيراد ولا الربح.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🔔</div>
+                    <div class="big-feature-content"><h4>تنبيه نقد دخل بعد التسوية</h4><p>إن دخل نقد بعد حفظ تسوية اليوم يظهر لك تنبيه بالمبلغ.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🗄️</div>
+                    <div class="big-feature-content"><h4>الدرج منفصل عن الخزينة</h4><p>الدرج للنقد اليومي فقط، والخزينة لكل مالك، ولا يمكن سحب أكثر من رصيدها.</p></div>
+                </div>
+                <div class="big-feature-item">
+                    <div class="big-feature-icon">🔐</div>
+                    <div class="big-feature-content"><h4>أول دخول آمن</h4><p>يُلزمك البرنامج بتغيير كلمة المرور الافتراضية عند أول دخول.</p></div>
+                </div>
             </div>
         </div>
     </section>
@@ -2926,6 +2983,55 @@
         </div>
     </section>
 
+    <section class="integrations" id="trust">
+        <div class="container">
+            <div style="text-align:center">
+                <div class="section-label">الثقة والدقة</div>
+                <h2 class="section-title">أرقام تثق بها،<br>وعمال تراقبهم</h2>
+                <p class="section-desc" style="margin:0 auto">كل دينار يمرّ بالنظام له أثر مسجّل، وأي فرق يظهر لك في نفس اليوم.</p>
+            </div>
+            <div class="integrations-grid">
+                <div class="integration-card reveal" data-tilt>
+                    <div class="integration-badge">جديد</div>
+                    <div class="integration-icon">⚖️</div>
+                    <h3>تسوية تكشف الفروق</h3>
+                    <p>يقارن النقد المتوقع بما في الدرج فعلاً، وتدخل فيه دفعات الديون القديمة التي حُصّلت اليوم، ويُنبّهك إن دخل نقد بعد الحفظ.</p>
+                </div>
+                <div class="integration-card reveal" data-tilt>
+                    <div class="integration-badge">جديد</div>
+                    <div class="integration-icon">🕵️</div>
+                    <h3>حماية من التلاعب</h3>
+                    <p>إلغاء بسبب إلزامي وبصلاحية، وكل فاتورة مرتبطة ببائعها، وسجل نشاط لا يُمحى.</p>
+                </div>
+                <div class="integration-card reveal" data-tilt>
+                    <div class="integration-badge">جديد</div>
+                    <div class="integration-icon">♻️</div>
+                    <h3>استعادة بلا مخاطرة</h3>
+                    <p>يتحقق من سلامة النسخة ويحفظ نسخة أمان قبل الاستبدال، ثم يعتمدها عند إعادة التشغيل.</p>
+                </div>
+                <div class="integration-card reveal" data-tilt>
+                    <div class="integration-badge">جديد</div>
+                    <div class="integration-icon">🖨️</div>
+                    <h3>طباعة بلا تعقيد</h3>
+                    <p>طابعة ويندوز، أو USB، أو شبكة، أو بلوتوث. وفواتير 80مم وملصقات باركود.</p>
+                </div>
+                <div class="integration-card reveal" data-tilt>
+                    <div class="integration-badge">جديد</div>
+                    <div class="integration-icon">🧮</div>
+                    <h3>ربح حقيقي لا تقديري</h3>
+                    <p>متوسط تكلفة مرجّح، وتكلفة القوارير، وخسائر المخزون، كلها تدخل في ربح كل فاتورة.</p>
+                </div>
+                <div class="integration-card reveal" data-tilt>
+                    <div class="integration-badge">جديد</div>
+                    <div class="integration-icon">🌍</div>
+                    <h3>عربي وإنجليزي، بلا إنترنت</h3>
+                    <p>قاعدة بياناتك على جهازك، والإنترنت لازم فقط لتلغرام وGoogle Drive إن فعّلتهما.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- SCREENSHOTS -->
     <section class="screens" id="screens">
         <div class="container">
@@ -3066,7 +3172,12 @@
                 <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">هل يمكن استخدامه على أكثر من جهاز؟<span class="faq-arrow">▾</span></button><div class="faq-answer">باقة المحل الواحد تدعم جهازاً واحداً. إذا أردت عدة أجهزة (مثل كاشير + مكتب) اختر باقة "متعدد المحلات" التي تدعم 3 تراخيص.</div></div>
                 <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">ما هي متطلبات التشغيل؟<span class="faq-arrow">▾</span></button><div class="faq-answer">Windows 10/11 (64-bit)، 4GB RAM كحد أدنى، 500MB مساحة للتثبيت. لا يحتاج Python أو أي برنامج إضافي — ملف EXE واحد قابل للتشغيل مباشرة.</div></div>
                 <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">كيف أربط بوت تلغرام بحسابي؟<span class="faq-arrow">▾</span></button><div class="faq-answer">من صفحة الإعدادات → التكاملات، أدخل Telegram Bot Token الذي تحصل عليه من @BotFather وChatID الخاص بك. البرنامج يشرح الخطوات بالتفصيل داخل الإعدادات.</div></div>
-            </div>
+            
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">أي طابعة أستطيع استعمالها؟<span class="faq-arrow">▾</span></button><div class="faq-answer">أي طابعة حرارية مثبّتة على ويندوز (تعريفها يكفي)، أو طابعة ESC/POS عبر USB أو الشبكة أو البلوتوث. وملصقات الباركود تدعم طابعات TSPL.</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">ماذا أفعل إن تعطل جهازي؟<span class="faq-arrow">▾</span></button><div class="faq-answer">ثبّت البرنامج على جهاز جديد واستعد آخر نسخة احتياطية. يفحص البرنامج الملف ويحفظ نسخة أمان قبل الاستبدال، وإن كانت النسخة مشفّرة يطلب كلمة سرها.</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">كيف أعرف إن كان عاملي يسرق؟<span class="faq-arrow">▾</span></button><div class="faq-answer">تسوية نهاية اليوم تُريك الفرق بين النقد المتوقع والفعلي. وكل إلغاء يتطلب سبباً ويُسجَّل باسم صاحبه، والعامل لا يلغي فواتير الأيام السابقة.</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">هل يدعم اللغة الإنجليزية؟<span class="faq-arrow">▾</span></button><div class="faq-answer">نعم، الواجهة بالعربية والإنجليزية ويمكنك التبديل في أي وقت.</div></div>
+        </div>
         </div>
     </section>
 
@@ -3152,85 +3263,97 @@
             else nav.classList.remove('scrolled');
         });
 
-        // ===== PARTICLES =====
+        // ===== LIVING BACKGROUND: جزيئات عطر + كود + مبيعات + ضباب عطري =====
         (function() {
-            const canvas = document.getElementById('particles-canvas');
-            const ctx = canvas ? canvas.getContext('2d') : null;
-            if (!canvas || !ctx) return; // [FIX] بعض المتصفحات/إضافات الخصوصية تعطّل Canvas API لمنع البصمة الرقمية — نتجاهل الخلفية المتحركة بأمان بدل تعطيل بقية الصفحة
-            let W, H, particles = [],
-                dpr = window.devicePixelRatio || 1;
-            const symbols = ['✦', '·', '⊹', '✧', '•', '◦', '⁕', '∘', '꩜', '✺'];
-
-            function resize() {
-                W = canvas.width = window.innerWidth * dpr;
-                H = canvas.height = window.innerHeight * dpr;
-                canvas.style.width = window.innerWidth + 'px';
-                canvas.style.height = window.innerHeight + 'px';
-                ctx.scale(dpr, dpr);
-            }
-
-            function rand(a, b) { return a + Math.random() * (b - a); }
-
-            function createParticle() {
-                const size = rand(5, 13);
-                return {
-                    x: rand(0, window.innerWidth),
-                    y: rand(0, window.innerHeight),
-                    size,
-                    baseSize: size,
-                    symbol: symbols[Math.floor(Math.random() * symbols.length)],
-                    vx: rand(-0.15, 0.15),
-                    vy: rand(-0.3, -0.06),
-                    alpha: rand(0.05, 0.25),
-                    targetAlpha: rand(0.05, 0.25),
-                    pulse: rand(0, Math.PI * 2),
-                    pulseSpeed: rand(0.004, 0.016),
-                    color: Math.random() > 0.6 ? 'rgba(236,72,153,' : Math.random() > 0.45 ? 'rgba(245,158,11,' :
-                        'rgba(139,92,246,',
-                    life: 0,
-                    maxLife: rand(260, 560),
-                };
-            }
-
-            function init() {
-                resize();
-                const count = Math.min(100, Math.floor(window.innerWidth / 18));
-                particles = Array.from({ length: count }, createParticle);
-            }
-
-            function draw() {
-                ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-                particles.forEach((p, i) => {
-                    p.life++;
-                    const progress = p.life / p.maxLife;
-                    if (progress < 0.12) p.alpha = p.targetAlpha * (progress / 0.12);
-                    else if (progress > 0.7) p.alpha = p.targetAlpha * (1 - (progress - 0.7) / 0.3);
-                    else p.alpha = p.targetAlpha;
-                    if (p.life > p.maxLife) { particles[i] = createParticle();
-                        particles[i].life = 0; return; }
-                    p.pulse += p.pulseSpeed;
-                    const currentSize = p.baseSize * (1 + 0.2 * Math.sin(p.pulse));
-                    p.x += p.vx;
-                    p.y += p.vy;
-                    if (p.x < -20) p.x = window.innerWidth + 20;
-                    if (p.x > window.innerWidth + 20) p.x = -20;
-                    if (p.y < -20) p.y = window.innerHeight + 20;
-                    ctx.save();
-                    ctx.globalAlpha = Math.max(0, p.alpha);
-                    ctx.font = `${currentSize}px serif`;
-                    ctx.fillStyle = `${p.color}${p.alpha})`;
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'middle';
-                    ctx.fillText(p.symbol, p.x, p.y);
-                    ctx.restore();
+            const cv = document.getElementById('particles-canvas');
+            const ctx = cv && cv.getContext ? cv.getContext('2d') : null;
+            if (!cv || !ctx) return;
+            const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const P = '236,72,153', V = '139,92,246', G = '245,158,11';
+            const CODE = ['SELECT SUM(profit) FROM sales', 'if stock_ml < 50: alert()', 'sale.total = 7,380', 'print_receipt(80mm)', 'INSERT INTO sales', 'eod.expected == eod.actual', 'coupon.apply("WELCOME10")', 'backup.encrypt()', 'barcode.make(128)', 'stock -= 100  # ml', 'def close_day():', 'return price - cost'];
+            const BIZ = ['Oud Royal 100ml', 'Rose Noir 50ml', 'Musk 30ml', 'Amber Gold', '7,380 دج', '+117,929', 'فاتورة #02113', 'ربح 37.6%', 'عطر عود ملكي', '||| || |||| ||', 'خصم 10%', 'نقاط +74'];
+            const R = (a, b) => a + Math.random() * (b - a);
+            let W, H, dpr, rings = [], toks = [], mist = [], t = 0, raf = 0, lx = 0, ly = 0;
+            const m = { x: -999, y: -999, sx: -999, sy: -999, on: false };
+            const orbs = [...document.querySelectorAll('.orb')];
+            function size() {
+                dpr = Math.min(devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight;
+                cv.width = W * dpr; cv.height = H * dpr; cv.style.width = W + 'px'; cv.style.height = H + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                rings = Array.from({ length: Math.min(11, Math.floor(W / 140)) }, () => ({
+                    x: R(0, W), y: R(0, H), r: R(24, 46), a: R(0, 6.28), w: R(-.003, .003), vx: R(-.12, .12), vy: R(-.1, .1), s: Math.floor(R(0, 6))
+                }));
+                toks = Array.from({ length: Math.min(30, Math.floor(W / 46)) }, (_, i) => {
+                    const code = i % 2 === 0, list = code ? CODE : BIZ;
+                    return { x: R(0, W), y: R(0, H), v: R(.12, .38), txt: list[Math.floor(R(0, list.length))], code };
                 });
-                requestAnimationFrame(draw);
             }
-            window.addEventListener('resize', resize);
-            init();
-            draw();
+            // جزيء عطري: حلقة بنزين (6 ذرات) + رابطة مزدوجة متناوبة + مجموعة وظيفية
+            function molecule(g) {
+                const dx = g.x - m.x, dy = g.y - m.y, d = m.on ? Math.hypot(dx, dy) : 999, near = Math.max(0, 1 - d / 240);
+                if (near > 0) { g.vx += dx / d * .006; g.vy += dy / d * .006; g.a += near * .01; }
+                g.vx *= .99; g.vy *= .99; g.x += g.vx; g.y += g.vy; g.a += g.w;
+                if (g.x < -80) g.x = W + 80; if (g.x > W + 80) g.x = -80; if (g.y < -80) g.y = H + 80; if (g.y > H + 80) g.y = -80;
+                const c = near > .05 ? G : V, al = .1 + near * .5, v = [];
+                for (let i = 0; i < 6; i++) v.push([g.x + Math.cos(g.a + i * 1.047) * g.r, g.y + Math.sin(g.a + i * 1.047) * g.r]);
+                ctx.strokeStyle = 'rgba(' + c + ',' + al + ')'; ctx.lineWidth = 1 + near;
+                ctx.beginPath(); v.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); ctx.closePath(); ctx.stroke();
+                ctx.lineWidth = .8; ctx.beginPath();
+                for (let i = 0; i < 6; i += 2) { const p = v[i], q = v[(i + 1) % 6], k = .22;
+                    ctx.moveTo(p[0] + (g.x - p[0]) * k, p[1] + (g.y - p[1]) * k); ctx.lineTo(q[0] + (g.x - q[0]) * k, q[1] + (g.y - q[1]) * k); }
+                ctx.stroke();
+                const o = v[g.s], ex = o[0] + (o[0] - g.x) * .7, ey = o[1] + (o[1] - g.y) * .7;
+                ctx.strokeStyle = 'rgba(' + P + ',' + (al * 1.2) + ')'; ctx.beginPath(); ctx.moveTo(o[0], o[1]); ctx.lineTo(ex, ey); ctx.stroke();
+                ctx.fillStyle = 'rgba(' + P + ',' + Math.min(.9, al * 2) + ')'; ctx.beginPath(); ctx.arc(ex, ey, 3, 0, 6.283); ctx.fill();
+                v.forEach(p => { ctx.fillStyle = 'rgba(' + c + ',' + (al * 1.6) + ')'; ctx.beginPath(); ctx.arc(p[0], p[1], 1.8, 0, 6.283); ctx.fill(); });
+            }
+            // نصوص الكود والمبيعات تصعد ببطء وتُكشف بقرب المؤشر
+            function tokens() {
+                for (const k of toks) {
+                    k.y -= k.v; if (k.y < -20) { k.y = H + 20; k.x = R(0, W); }
+                    const d = m.on ? Math.hypot(k.x - m.sx, k.y - m.sy) : 999, near = Math.max(0, 1 - d / 230);
+                    ctx.font = (k.code ? '12px "Courier New",monospace' : '13px Tajawal,sans-serif');
+                    ctx.fillStyle = 'rgba(' + (near > .1 ? G : (k.code ? V : P)) + ',' + (.055 + near * .6) + ')';
+                    ctx.fillText(k.txt, k.x, k.y);
+                }
+            }
+            // ضباب عطري يتصاعد خلف المؤشر
+            function smoke() {
+                for (let i = mist.length - 1; i >= 0; i--) {
+                    const q = mist[i]; q.life++; q.x += q.vx + Math.sin(q.life * .06 + q.ph) * .3; q.y += q.vy; q.r += .18;
+                    if (q.life > q.max) { mist.splice(i, 1); continue; }
+                    const f = Math.sin(q.life / q.max * Math.PI) * .2, g = ctx.createRadialGradient(q.x, q.y, 0, q.x, q.y, q.r);
+                    g.addColorStop(0, 'rgba(' + q.c + ',' + f + ')'); g.addColorStop(1, 'rgba(' + q.c + ',0)');
+                    ctx.fillStyle = g; ctx.fillRect(q.x - q.r, q.y - q.r, q.r * 2, q.r * 2);
+                }
+            }
+            function spot() {
+                if (!m.on) return;
+                const g = ctx.createRadialGradient(m.sx, m.sy, 0, m.sx, m.sy, 260);
+                g.addColorStop(0, 'rgba(' + P + ',.14)'); g.addColorStop(.5, 'rgba(' + V + ',.06)'); g.addColorStop(1, 'rgba(' + V + ',0)');
+                ctx.fillStyle = g; ctx.fillRect(m.sx - 260, m.sy - 260, 520, 520);
+            }
+            function frame() {
+                t += .008; m.sx += (m.x - m.sx) * .08; m.sy += (m.y - m.sy) * .08;
+                ctx.globalCompositeOperation = 'source-over'; ctx.clearRect(0, 0, W, H);
+                ctx.globalCompositeOperation = 'lighter';
+                rings.forEach(molecule); tokens(); smoke(); spot();
+                if (m.on) orbs.forEach((o, i) => { const d = (i + 1) * 9; o.style.translate = ((m.sx / W - .5) * -d * 2) + 'px ' + ((m.sy / H - .5) * -d * 2) + 'px'; });
+                raf = RM ? 0 : requestAnimationFrame(frame);
+            }
+            const go = () => { if (!raf) raf = requestAnimationFrame(frame); };
+            addEventListener('pointermove', e => {
+                if (e.pointerType === 'touch') return;
+                m.x = e.clientX; m.y = e.clientY; if (!m.on) { m.sx = m.x; m.sy = m.y; lx = m.x; ly = m.y; } m.on = true;
+                if (!RM && Math.hypot(m.x - lx, m.y - ly) > 16 && mist.length < 70) {
+                    lx = m.x; ly = m.y; mist.push({ x: m.x, y: m.y, r: R(5, 10), vx: R(-.2, .2), vy: R(-.9, -.4), life: 0, max: R(70, 120), ph: R(0, 6), c: Math.random() > .45 ? P : G });
+                }
+            });
+            document.addEventListener('pointerleave', () => { m.on = false; });
+            addEventListener('resize', size);
+            document.addEventListener('visibilitychange', () => { if (document.hidden) { cancelAnimationFrame(raf); raf = 0; } else if (!RM) go(); });
+            size(); if (RM) frame(); else go();
         })();
-
         // ===== COUNTER ANIMATION =====
         function animateNum(el, target, suffix = '', prefix = '') {
             let start = 0;
